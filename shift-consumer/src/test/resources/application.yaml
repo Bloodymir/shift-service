@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+shift-resource:
+  url: http://localhost:8080
+
+scheduling:
+  enabled: false
+
+
+spring:
+  jpa:
+    open-in-view: false

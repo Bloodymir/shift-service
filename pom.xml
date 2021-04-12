@@ -9,58 +9,17 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.vladimiro.shift</groupId>
-	<artifactId>rest-provider</artifactId>
+	<artifactId>shift-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>provider</name>
-	<description>Provides shift data through rest endpoint</description>
+	<packaging>pom</packaging>
+	<name>shift-parent</name>
+	<description>Parent for shift-provider</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>15</java.version>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.2.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jeasy</groupId>
-			<artifactId>easy-random-core</artifactId>
-			<version>4.3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jeasy</groupId>
-			<artifactId>easy-random-bean-validation</artifactId>
-			<version>4.3.0</version>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
+	<modules>
+		<module>rest-provider-api</module>
+		<module>rest-provider-service</module>
+		<module>shift-consumer</module>
+	</modules>
 </project>
